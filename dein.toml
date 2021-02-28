@@ -1,0 +1,131 @@
+[[plugins]]
+repo = 'Shougo/unite.vim'
+
+[[plugins]]
+repo = 'Shougo/vimfiler'
+
+
+# コマンド類を確認してから導入予定
+# [[plugins]]
+# repo = 'lambdalisue/fern.vim'
+# depends = ['fern-git-status.vim', 'fern-renderer-nerdfont.vim', 'fern-renderer-devicons.vim']
+
+# [[plugins]]
+# repo = 'lambdalisue/fern-git-status.vim'
+
+# [[plugins]]
+# repo = 'lambdalisue/fern-renderer-nerdfont.vim'
+
+# [[plugins]]
+# repo = 'lambdalisue/fern-renderer-devicons.vim'
+# hook_add = '''
+#     let g:fern#renderer = "devicons"
+# '''
+
+[[plugins]]
+repo = 'scrooloose/nerdtree'
+hook_add = '''
+	nnoremap <Tab><Tab> :NERDTreeToggle<CR>
+	autocmd VimEnter * execute 'NERDTree'
+'''
+
+[[plugins]]
+repo = 'Xuyuanp/nerdtree-git-plugin'
+
+[[plugins]]
+repo = 'airblade/vim-gitgutter'
+
+[[plugins]]
+repo = 'scrooloose/nerdcommenter'
+hook_add = '''
+	let g:NERDSpaceDelims=1
+	let g:NERDDefaultAlign='left'
+'''
+
+[[plugins]]
+repo = 'vim-airline/vim-airline'
+hook_add = '''
+  let g:airline#extensions#ale#enabled = 1
+'''
+
+[[plugins]]
+repo = 'ctrlpvim/ctrlp.vim'
+hook_add = '''
+	let g:ctrlp_custom_ignore = {
+	  \ 'dir':  '\v[\/]\.(git|hg|svn)$',
+	  \ 'file': '\v\.(exe|so|dll)$',
+	  \ 'link': 'some_bad_symbolic_links',
+	  \ }
+	  let g:ctrlp_max_files = 100000
+	  let g:ctrlp_max_height = 40
+'''
+
+[[plugins]]
+repo = "tpope/vim-fugitive"
+
+[[plugins]]
+repo = "airblade/vim-gitgutter"
+
+[[plugins]]
+repo = "bronson/vim-trailing-whitespace"
+
+[[plugins]]
+repo = 'majutsushi/tagbar'
+hook_add = '''
+	nnoremap <silent> <C-t> :TagbarToggle<CR>
+'''
+
+[[plugins]]
+repo = 'hushicai/tagbar-javascript.vim'
+on_ft = ['javascript']
+
+[[plugins]]
+repo = "w0rp/ale"
+hook_add = '''
+  let g:ale_set_loclist = 0
+  let g:ale_set_quickfix = 1
+  let g:ale_open_list = 0
+  let g:ale_linters = {
+\   'html': ['htmlhint'],
+\   'javascript': ['eslint'],
+\   'ruby': ['rubocop'],
+\   'css': ['csslint'],
+\   'scss': ['sasslint'],
+\}
+'''
+
+[[plugins]]
+repo = 'junegunn/fzf'
+build = './install --all'
+merged = '0'
+
+[[plugins]]
+repo = 'junegunn/fzf.vim'
+depends = 'fzf'
+
+[[plugins]]
+repo = 'tpope/vim-surround'
+
+[[plugins]]
+repo = 'prabirshrestha/async.vim'
+
+[[plugins]]
+repo = 'prabirshrestha/asyncomplete.vim'
+
+[[plugins]]
+repo = 'prabirshrestha/asyncomplete-lsp.vim'
+
+[[plugins]]
+repo = 'prabirshrestha/vim-lsp'
+
+[[plugins]]
+repo = 'mattn/vim-lsp-settings'
+
+[[plugins]]
+repo = 'dart-lang/dart-vim-plugin'
+
+[[plugins]]
+repo = 'thosakwe/vim-flutter'
+
+[[plugins]]
+repo = 'vim-jp/vimdoc-ja'
